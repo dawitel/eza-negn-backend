@@ -1,0 +1,18 @@
+server:
+  host: "localhost"
+  port: "8080"
+  mode: "debug"
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "devuser"
+  password: "devpassword"
+  name: "eza_negn_dev"
+  sslmode: "disable"
+
+logger:
+  level: "debug"
+
+secrets:
+  jwt_secret: "devsecretkey"

@@ -1,0 +1,19 @@
+server:
+  host: "localhost"
+  port: "8081"
+  mode: "test"
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "testuser"
+  password: "testpassword"
+  name: "eza_negn_test"
+  sslmode: "disable"
+
+logger:
+  level: "debug"
+
+secrets:
+  jwt_secret: "testsecretkey"
+

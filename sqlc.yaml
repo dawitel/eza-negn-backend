@@ -1,0 +1,17 @@
+version: "2"
+sql:
+  - schema: "migrations"           # Path to the folder where your schema files (SQL migrations) are stored
+    queries: "internal/db/queries" # Path to the folder where your SQL queries will be stored
+    engine: "postgresql"           # We're using PostgreSQL as the database engine
+    gen:
+      go:
+        package: "db"              # The name of the package to generate code in
+        out: "internal/db"         # Path to the folder where generated Go code will be placed
+
+# Database connection settings (for running sqlc commands like `sqlc migrate`)
+# Optional but recommended for generating Go code from database schemas
+databases:
+  development:
+    connection: "postgres://user:password@localhost:5432/eza_negn_dev?sslmode=disable"
+  test:
+    connection: "postgres://user:password@localhost:5432/eza_negn_test?sslmode=disable"
